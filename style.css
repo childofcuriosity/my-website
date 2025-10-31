@@ -1,0 +1,89 @@
+/* style.css */
+/* 重置默认样式并设置基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 淡蓝色渐变背景 */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* 为小屏幕添加内边距 */
+  text-align: center;
+}
+
+/* 主容器 */
+.main-container {
+  width: 100%;
+  max-width: 1200px; /* 最大宽度 */
+  background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  padding: 40px;
+  backdrop-filter: blur(5px); /* 背景模糊效果 (可选) */
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 2.5rem; /* 增大标题 */
+  margin-bottom: 30px;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* 轻微文字阴影 */
+}
+
+/* 导航列表样式 */
+ul {
+  list-style: none; /* 移除默认列表符号 */
+  display: flex;
+  flex-direction: column; /* 默认垂直排列 */
+  gap: 15px; /* 项目间距 */
+  margin-top: 20px;
+}
+
+/* 链接样式 */
+a {
+  text-decoration: none;
+  color: #3498db; /* 链接颜色 */
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 15px 25px; /* 内边距，使链接更易点击 */
+  border: 2px solid #3498db; /* 边框 */
+  border-radius: 50px; /* 圆角按钮效果 */
+  transition: all 0.3s ease; /* 平滑过渡效果 */
+  display: block; /* 使链接块状显示 */
+  width: 100%;
+  max-width: 300px; /* 限制按钮最大宽度 */
+  margin: 0 auto; /* 居中按钮 */
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+}
+
+/* 链接悬停效果 */
+a:hover {
+  background-color: #3498db; /* 悬停时背景色 */
+  color: white; /* 悬停时文字颜色 */
+  transform: translateY(-2px); /* 轻微上移效果 */
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3); /* 悬停时阴影 */
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+  /* 在中等及以上屏幕宽度时，将列表项水平排列 */
+  ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; /* 水平居中 */
+  }
+  h1 {
+    font-size: 3rem; /* 进一步增大标题 */
+  }
+  .main-container {
+    padding: 60px; /* 增大容器内边距 */
+  }
+}
